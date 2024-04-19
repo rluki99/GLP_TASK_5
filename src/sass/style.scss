@@ -1,9 +1,132 @@
 @import './base';
 @import './variables';
-@import './fonts';
-@import './icons';
 @import './mixins';
-@import './placeholders';
-@import './layouts';
-@import './animations';
 
+body {
+	background-image: linear-gradient(to right top, #f62e7d, #f94d6c, #f76761, #f27e5c, #eb925e);
+	height: 100svh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	width: 320px;
+	height: 200px;
+	background-color: $pure-white;
+	border-radius: 25px;
+	box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.400);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: height 0.3s;
+
+	&:hover {
+		height: 310px;
+	}
+
+	.card__picture {
+		width: 150px;
+		height: 150px;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 25px;
+		box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.400);
+		transition: width 0.5s, height 0.5s;
+	}
+
+	&:hover .card__picture {
+		width: 180px;
+		height: 180px;
+	}
+
+	.card__name {
+		margin-top: 100px;
+		font-size: 24px;
+		font-weight: 600;
+		color: $dark-grey;
+	}
+
+	.card__position{
+		font-size: 18px;
+		color: $light-grey;
+	}
+
+	.card__stats {
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 12px;
+		margin-top: 20px;
+		display: grid;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out 0.3s;
+		visibility: hidden;
+	}
+
+	&:hover .card__stats {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.card__stat {
+		text-align: center;
+	}
+
+	.card__stat-amount {
+		font-weight: 700;
+		color: $dark-grey;
+		font-size: 19px;
+	}
+
+	.card__stat-title {
+		color: $light-grey;
+		font-size: 16px;
+	}
+
+	.card__ctas {
+		margin-top: 20px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 20px;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.5s ease-in-out 0.3s;
+	}
+
+	&:hover .card__ctas {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.card__button {
+		border: 1px solid transparent;
+		border-radius: 10px;
+		padding: 10px 20px;
+		font-size: 20px;
+		font-weight: 700;
+		display: block;
+		color: $pure-white;
+		background-color: #f62e7d;
+		cursor: pointer;
+		transition: background-color 0.4s;
+
+		&:hover {
+			background-color: #f5619c
+		}
+
+		&--white {
+			background-color: $pure-white;
+			border: 1px solid $silver;
+			color: $silver;
+			transition: color 0.4s, background-color 0.4s, border 0.4s;
+
+			&:hover {
+				color: $pure-white;
+				border: 1px solid transparent;
+			}
+		}
+	}
+}
