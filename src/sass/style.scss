@@ -58,7 +58,7 @@ body {
 
 	.card__stats {
 		grid-template-columns: 1fr 1fr 1fr;
-		column-gap: 12px;
+		column-gap: 15px;
 		margin-top: 20px;
 		display: grid;
 		opacity: 0;
@@ -86,7 +86,7 @@ body {
 		font-size: 16px;
 	}
 
-	.card__ctas {
+	.card__buttons {
 		margin-top: 20px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -96,7 +96,7 @@ body {
 		transition: opacity 0.5s ease-in-out 0.3s;
 	}
 
-	&:hover .card__ctas {
+	&:hover .card__buttons {
 		opacity: 1;
 		visibility: visible;
 	}
@@ -106,7 +106,7 @@ body {
 		border-radius: 10px;
 		padding: 10px 20px;
 		font-size: 20px;
-		font-weight: 700;
+		font-weight: 600;
 		display: block;
 		color: $pure-white;
 		background-color: #f62e7d;
