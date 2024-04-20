@@ -3,7 +3,7 @@
 @import './mixins';
 
 body {
-	background-image: linear-gradient(to right top, #f62e7d, #f94d6c, #f76761, #f27e5c, #eb925e);
+	background-image: $bodyGradient;
 	height: 100svh;
 	display: flex;
 	align-items: center;
@@ -15,7 +15,7 @@ body {
 	height: 200px;
 	background-color: $pure-white;
 	border-radius: 25px;
-	box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.400);
+	box-shadow: 10px 10px 10px $shadow;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -35,7 +35,7 @@ body {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		border-radius: 25px;
-		box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.400);
+		box-shadow: 10px 10px 10px $shadow;
 		transition: width 0.5s, height 0.5s;
 	}
 
@@ -62,13 +62,15 @@ body {
 		margin-top: 20px;
 		display: grid;
 		opacity: 0;
-		transition: opacity 0.5s ease-in-out 0.3s;
 		visibility: hidden;
+		height: 0;
+		transition: opacity 0.5s ease-in-out 0.4s, height 0.5s ease-in-out;
 	}
 
 	&:hover .card__stats {
 		opacity: 1;
 		visibility: visible;
+		height: auto;
 	}
 
 	.card__stat {
@@ -93,12 +95,14 @@ body {
 		column-gap: 20px;
 		opacity: 0;
 		visibility: hidden;
-		transition: opacity 0.5s ease-in-out 0.3s;
+		height: 0;
+		transition: opacity 0.5s ease-in-out 0.4s, height 0.5s ease-in-out;
 	}
 
 	&:hover .card__buttons {
 		opacity: 1;
 		visibility: visible;
+		height: auto;
 	}
 
 	.card__button {

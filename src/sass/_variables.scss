@@ -6,8 +6,12 @@ $breakpointLaptop: 1025px;
 $breakpointLaptopBig: 1200px;
 $breakpointDesktopBig: 1600px;
 
+//gradients 
+$bodyGradient: linear-gradient(to right top, #f62e7d, #f94d6c, #f76761, #f27e5c, #eb925e);
+
 //colors
 $light-grey: #797979;
 $dark-grey: #444444;
 $silver: #c0c0c0;
-$pure-white: #fff
+$pure-white: #fff;
+$shadow: rgba(255, 255, 255, 0.400);
